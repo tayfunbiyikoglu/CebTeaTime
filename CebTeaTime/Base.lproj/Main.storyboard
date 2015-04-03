@@ -1,25 +1,125 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="14C1514" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
-                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModule="CebTeaTime" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
                         <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="CEB Tea Time" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0oE-zY-Ljy">
+                                <rect key="frame" x="41" y="34" width="253" height="73"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" alpha="0.0" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Login is not successful" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S5Q-U4-0Um">
+                                <rect key="frame" x="16" y="371" width="288" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="OwY-yg-mNk"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                <color key="textColor" red="1" green="0.028915276529999999" blue="0.036454277930000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="csY-CJ-VbP">
+                                <rect key="frame" x="16" y="448" width="288" height="56"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="56" id="AqK-ec-w7i"/>
+                                    <constraint firstAttribute="width" constant="288" id="Nc7-vc-gHp"/>
+                                </constraints>
+                                <state key="normal" title="Button" image="facebooklogin.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="signin:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="K3m-s9-qQv"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" alpha="0.0" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="The login was unsuccessfull. " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zMA-bo-xV8">
+                                <rect key="frame" x="54" y="384" width="213" height="20"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                <color key="textColor" red="1" green="0.028915276529999999" blue="0.036454277930000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="csY-CJ-VbP" secondAttribute="bottom" constant="64" id="24O-Ya-wqu"/>
+                            <constraint firstItem="csY-CJ-VbP" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" id="Hfk-tq-jlA"/>
+                            <constraint firstItem="S5Q-U4-0Um" firstAttribute="leading" secondItem="csY-CJ-VbP" secondAttribute="leading" id="Qso-RI-Ou1"/>
+                            <constraint firstAttribute="centerX" secondItem="zMA-bo-xV8" secondAttribute="centerX" id="Slx-ka-sWx"/>
+                            <constraint firstItem="csY-CJ-VbP" firstAttribute="top" secondItem="zMA-bo-xV8" secondAttribute="bottom" constant="44" id="cLd-LL-7lC"/>
+                            <constraint firstItem="csY-CJ-VbP" firstAttribute="trailing" secondItem="kh9-bI-dsS" secondAttribute="trailingMargin" id="lot-L2-Lye"/>
+                            <constraint firstItem="S5Q-U4-0Um" firstAttribute="trailing" secondItem="csY-CJ-VbP" secondAttribute="trailing" id="pUD-GQ-ZQf"/>
+                            <constraint firstItem="csY-CJ-VbP" firstAttribute="top" secondItem="S5Q-U4-0Um" secondAttribute="bottom" constant="56" id="z83-Be-qwd"/>
+                        </constraints>
                     </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="loginCancelledLabel" destination="zMA-bo-xV8" id="TER-Bl-wLw"/>
+                        <segue destination="GgV-8A-vdC" kind="showDetail" identifier="signUp" id="hKG-qR-uh8"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="49" y="448"/>
+        </scene>
+        <!--Sign Up View Controller-->
+        <scene sceneID="gJg-i3-Mdx">
+            <objects>
+                <viewController id="GgV-8A-vdC" customClass="SignUpViewController" customModule="CebTeaTime" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="AGB-pw-jXn"/>
+                        <viewControllerLayoutGuide type="bottom" id="e0Z-gh-4sp"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Kxm-TT-bzD">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sign Up" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tGf-Lp-i5J">
+                                <rect key="frame" x="16" y="57" width="288" height="20"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Wg5-KX-17h">
+                                <rect key="frame" x="60" y="118" width="200" height="200"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="EeU-d3-oKu"/>
+                                    <constraint firstAttribute="width" constant="200" id="bmn-fB-mX6"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="tGf-Lp-i5J" firstAttribute="leading" secondItem="Kxm-TT-bzD" secondAttribute="leadingMargin" id="1Z7-AX-yc2"/>
+                            <constraint firstItem="tGf-Lp-i5J" firstAttribute="trailing" secondItem="Kxm-TT-bzD" secondAttribute="trailingMargin" id="diG-nu-ZRd"/>
+                            <constraint firstItem="tGf-Lp-i5J" firstAttribute="top" secondItem="AGB-pw-jXn" secondAttribute="bottom" constant="37" id="m7f-RW-9Ui"/>
+                            <constraint firstItem="Wg5-KX-17h" firstAttribute="top" secondItem="tGf-Lp-i5J" secondAttribute="bottom" constant="41" id="oeg-Sr-Tgf"/>
+                            <constraint firstAttribute="centerX" secondItem="Wg5-KX-17h" secondAttribute="centerX" id="qFk-GB-aA0"/>
+                        </constraints>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="profileImage" destination="Wg5-KX-17h" id="pIr-cK-ebm"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PZF-em-wZp" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="454" y="448"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="facebooklogin.png" width="492" height="108"/>
+    </resources>
 </document>

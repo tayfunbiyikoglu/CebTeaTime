@@ -13,6 +13,29 @@
 		B7EAC0281ACE8BF900C0C4D2 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B7EAC0271ACE8BF900C0C4D2 /* Images.xcassets */; };
 		B7EAC02B1ACE8BF900C0C4D2 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = B7EAC0291ACE8BF900C0C4D2 /* LaunchScreen.xib */; };
 		B7EAC0371ACE8BF900C0C4D2 /* CebTeaTimeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7EAC0361ACE8BF900C0C4D2 /* CebTeaTimeTests.swift */; };
+		B7EAC0471ACE8CAE00C0C4D2 /* facebooklogin.png in Resources */ = {isa = PBXBuildFile; fileRef = B7EAC0421ACE8CAE00C0C4D2 /* facebooklogin.png */; };
+		B7EAC0481ACE8CAE00C0C4D2 /* profile-bg.png in Resources */ = {isa = PBXBuildFile; fileRef = B7EAC0431ACE8CAE00C0C4D2 /* profile-bg.png */; };
+		B7EAC0491ACE8CAE00C0C4D2 /* tea1.png in Resources */ = {isa = PBXBuildFile; fileRef = B7EAC0441ACE8CAE00C0C4D2 /* tea1.png */; };
+		B7EAC04A1ACE8CAE00C0C4D2 /* tea2.png in Resources */ = {isa = PBXBuildFile; fileRef = B7EAC0451ACE8CAE00C0C4D2 /* tea2.png */; };
+		B7EAC04B1ACE8CAE00C0C4D2 /* tea3.png in Resources */ = {isa = PBXBuildFile; fileRef = B7EAC0461ACE8CAE00C0C4D2 /* tea3.png */; };
+		B7EAC0501ACE8CE200C0C4D2 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B7EAC04C1ACE8CE200C0C4D2 /* Bolts.framework */; };
+		B7EAC0511ACE8CE200C0C4D2 /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B7EAC04D1ACE8CE200C0C4D2 /* FacebookSDK.framework */; };
+		B7EAC0521ACE8CE200C0C4D2 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B7EAC04E1ACE8CE200C0C4D2 /* Parse.framework */; };
+		B7EAC0531ACE8CE200C0C4D2 /* ParseFacebookUtils.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B7EAC04F1ACE8CE200C0C4D2 /* ParseFacebookUtils.framework */; };
+		B7EAC0551ACE8CFE00C0C4D2 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B7EAC0541ACE8CFE00C0C4D2 /* AudioToolbox.framework */; };
+		B7EAC0571ACE8D1100C0C4D2 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B7EAC0561ACE8D1100C0C4D2 /* CoreLocation.framework */; };
+		B7EAC0591ACE8D2800C0C4D2 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B7EAC0581ACE8D2800C0C4D2 /* SystemConfiguration.framework */; };
+		B7EAC05B1ACE8D3500C0C4D2 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B7EAC05A1ACE8D3500C0C4D2 /* CoreGraphics.framework */; };
+		B7EAC05D1ACE8D4F00C0C4D2 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B7EAC05C1ACE8D4F00C0C4D2 /* QuartzCore.framework */; };
+		B7EAC05F1ACE8D5900C0C4D2 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B7EAC05E1ACE8D5900C0C4D2 /* MobileCoreServices.framework */; };
+		B7EAC0611ACE8D6400C0C4D2 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B7EAC0601ACE8D6400C0C4D2 /* CFNetwork.framework */; };
+		B7EAC0631ACE8D7200C0C4D2 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B7EAC0621ACE8D7200C0C4D2 /* Security.framework */; };
+		B7EAC0651ACE8DD600C0C4D2 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B7EAC0641ACE8DD600C0C4D2 /* StoreKit.framework */; };
+		B7EAC0671ACE8DEB00C0C4D2 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = B7EAC0661ACE8DEB00C0C4D2 /* libz.dylib */; };
+		B7EAC0691ACE901100C0C4D2 /* turkish-tea2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B7EAC0681ACE901100C0C4D2 /* turkish-tea2.jpg */; };
+		B7EAC06B1ACE909900C0C4D2 /* turkish-tea-1.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = B7EAC06A1ACE909900C0C4D2 /* turkish-tea-1.jpeg */; };
+		B7FB15A51ACEA22C00C6DF78 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7FB15A41ACEA22C00C6DF78 /* SignUpViewController.swift */; };
+		B7FB15A71ACEA67100C6DF78 /* profile-rabbit-toy.png in Resources */ = {isa = PBXBuildFile; fileRef = B7FB15A61ACEA67100C6DF78 /* profile-rabbit-toy.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +59,30 @@
 		B7EAC0301ACE8BF900C0C4D2 /* CebTeaTimeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CebTeaTimeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B7EAC0351ACE8BF900C0C4D2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B7EAC0361ACE8BF900C0C4D2 /* CebTeaTimeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CebTeaTimeTests.swift; sourceTree = "<group>"; };
+		B7EAC0421ACE8CAE00C0C4D2 /* facebooklogin.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = facebooklogin.png; sourceTree = "<group>"; };
+		B7EAC0431ACE8CAE00C0C4D2 /* profile-bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "profile-bg.png"; sourceTree = "<group>"; };
+		B7EAC0441ACE8CAE00C0C4D2 /* tea1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tea1.png; sourceTree = "<group>"; };
+		B7EAC0451ACE8CAE00C0C4D2 /* tea2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tea2.png; sourceTree = "<group>"; };
+		B7EAC0461ACE8CAE00C0C4D2 /* tea3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tea3.png; sourceTree = "<group>"; };
+		B7EAC04C1ACE8CE200C0C4D2 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
+		B7EAC04D1ACE8CE200C0C4D2 /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FacebookSDK.framework; sourceTree = "<group>"; };
+		B7EAC04E1ACE8CE200C0C4D2 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
+		B7EAC04F1ACE8CE200C0C4D2 /* ParseFacebookUtils.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ParseFacebookUtils.framework; sourceTree = "<group>"; };
+		B7EAC0541ACE8CFE00C0C4D2 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		B7EAC0561ACE8D1100C0C4D2 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		B7EAC0581ACE8D2800C0C4D2 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		B7EAC05A1ACE8D3500C0C4D2 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		B7EAC05C1ACE8D4F00C0C4D2 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		B7EAC05E1ACE8D5900C0C4D2 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		B7EAC0601ACE8D6400C0C4D2 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		B7EAC0621ACE8D7200C0C4D2 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		B7EAC0641ACE8DD600C0C4D2 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		B7EAC0661ACE8DEB00C0C4D2 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
+		B7EAC0681ACE901100C0C4D2 /* turkish-tea2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "turkish-tea2.jpg"; sourceTree = "<group>"; };
+		B7EAC06A1ACE909900C0C4D2 /* turkish-tea-1.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "turkish-tea-1.jpeg"; sourceTree = "<group>"; };
+		B7EAC06C1ACE915700C0C4D2 /* CebTeaTime-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "CebTeaTime-Bridging-Header.h"; path = "images/CebTeaTime-Bridging-Header.h"; sourceTree = "<group>"; };
+		B7FB15A41ACEA22C00C6DF78 /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		B7FB15A61ACEA67100C6DF78 /* profile-rabbit-toy.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "profile-rabbit-toy.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,6 +90,20 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B7EAC0671ACE8DEB00C0C4D2 /* libz.dylib in Frameworks */,
+				B7EAC0651ACE8DD600C0C4D2 /* StoreKit.framework in Frameworks */,
+				B7EAC0631ACE8D7200C0C4D2 /* Security.framework in Frameworks */,
+				B7EAC0611ACE8D6400C0C4D2 /* CFNetwork.framework in Frameworks */,
+				B7EAC05F1ACE8D5900C0C4D2 /* MobileCoreServices.framework in Frameworks */,
+				B7EAC05D1ACE8D4F00C0C4D2 /* QuartzCore.framework in Frameworks */,
+				B7EAC05B1ACE8D3500C0C4D2 /* CoreGraphics.framework in Frameworks */,
+				B7EAC0591ACE8D2800C0C4D2 /* SystemConfiguration.framework in Frameworks */,
+				B7EAC0571ACE8D1100C0C4D2 /* CoreLocation.framework in Frameworks */,
+				B7EAC0551ACE8CFE00C0C4D2 /* AudioToolbox.framework in Frameworks */,
+				B7EAC0501ACE8CE200C0C4D2 /* Bolts.framework in Frameworks */,
+				B7EAC0521ACE8CE200C0C4D2 /* Parse.framework in Frameworks */,
+				B7EAC0531ACE8CE200C0C4D2 /* ParseFacebookUtils.framework in Frameworks */,
+				B7EAC0511ACE8CE200C0C4D2 /* FacebookSDK.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -59,6 +120,16 @@
 		B7EAC0121ACE8BF900C0C4D2 = {
 			isa = PBXGroup;
 			children = (
+				B7EAC0661ACE8DEB00C0C4D2 /* libz.dylib */,
+				B7EAC0641ACE8DD600C0C4D2 /* StoreKit.framework */,
+				B7EAC0621ACE8D7200C0C4D2 /* Security.framework */,
+				B7EAC0601ACE8D6400C0C4D2 /* CFNetwork.framework */,
+				B7EAC05E1ACE8D5900C0C4D2 /* MobileCoreServices.framework */,
+				B7EAC05C1ACE8D4F00C0C4D2 /* QuartzCore.framework */,
+				B7EAC05A1ACE8D3500C0C4D2 /* CoreGraphics.framework */,
+				B7EAC0581ACE8D2800C0C4D2 /* SystemConfiguration.framework */,
+				B7EAC0561ACE8D1100C0C4D2 /* CoreLocation.framework */,
+				B7EAC0541ACE8CFE00C0C4D2 /* AudioToolbox.framework */,
 				B7EAC01D1ACE8BF900C0C4D2 /* CebTeaTime */,
 				B7EAC0331ACE8BF900C0C4D2 /* CebTeaTimeTests */,
 				B7EAC01C1ACE8BF900C0C4D2 /* Products */,
@@ -77,11 +148,18 @@
 		B7EAC01D1ACE8BF900C0C4D2 /* CebTeaTime */ = {
 			isa = PBXGroup;
 			children = (
+				B7EAC04C1ACE8CE200C0C4D2 /* Bolts.framework */,
+				B7EAC04D1ACE8CE200C0C4D2 /* FacebookSDK.framework */,
+				B7EAC04E1ACE8CE200C0C4D2 /* Parse.framework */,
+				B7EAC04F1ACE8CE200C0C4D2 /* ParseFacebookUtils.framework */,
+				B7EAC0411ACE8C6900C0C4D2 /* images */,
 				B7EAC0201ACE8BF900C0C4D2 /* AppDelegate.swift */,
 				B7EAC0221ACE8BF900C0C4D2 /* ViewController.swift */,
 				B7EAC0241ACE8BF900C0C4D2 /* Main.storyboard */,
+				B7FB15A41ACEA22C00C6DF78 /* SignUpViewController.swift */,
 				B7EAC0271ACE8BF900C0C4D2 /* Images.xcassets */,
 				B7EAC0291ACE8BF900C0C4D2 /* LaunchScreen.xib */,
+				B7EAC06C1ACE915700C0C4D2 /* CebTeaTime-Bridging-Header.h */,
 				B7EAC01E1ACE8BF900C0C4D2 /* Supporting Files */,
 			);
 			path = CebTeaTime;
@@ -110,6 +188,21 @@
 				B7EAC0351ACE8BF900C0C4D2 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		B7EAC0411ACE8C6900C0C4D2 /* images */ = {
+			isa = PBXGroup;
+			children = (
+				B7EAC0421ACE8CAE00C0C4D2 /* facebooklogin.png */,
+				B7EAC06A1ACE909900C0C4D2 /* turkish-tea-1.jpeg */,
+				B7EAC0431ACE8CAE00C0C4D2 /* profile-bg.png */,
+				B7EAC0441ACE8CAE00C0C4D2 /* tea1.png */,
+				B7FB15A61ACEA67100C6DF78 /* profile-rabbit-toy.png */,
+				B7EAC0681ACE901100C0C4D2 /* turkish-tea2.jpg */,
+				B7EAC0451ACE8CAE00C0C4D2 /* tea2.png */,
+				B7EAC0461ACE8CAE00C0C4D2 /* tea3.png */,
+			);
+			path = images;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -192,9 +285,17 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B7EAC0691ACE901100C0C4D2 /* turkish-tea2.jpg in Resources */,
+				B7EAC06B1ACE909900C0C4D2 /* turkish-tea-1.jpeg in Resources */,
+				B7EAC04B1ACE8CAE00C0C4D2 /* tea3.png in Resources */,
 				B7EAC0261ACE8BF900C0C4D2 /* Main.storyboard in Resources */,
+				B7EAC04A1ACE8CAE00C0C4D2 /* tea2.png in Resources */,
 				B7EAC02B1ACE8BF900C0C4D2 /* LaunchScreen.xib in Resources */,
+				B7EAC0491ACE8CAE00C0C4D2 /* tea1.png in Resources */,
 				B7EAC0281ACE8BF900C0C4D2 /* Images.xcassets in Resources */,
+				B7EAC0471ACE8CAE00C0C4D2 /* facebooklogin.png in Resources */,
+				B7FB15A71ACEA67100C6DF78 /* profile-rabbit-toy.png in Resources */,
+				B7EAC0481ACE8CAE00C0C4D2 /* profile-bg.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -212,6 +313,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B7FB15A51ACEA22C00C6DF78 /* SignUpViewController.swift in Sources */,
 				B7EAC0231ACE8BF900C0C4D2 /* ViewController.swift in Sources */,
 				B7EAC0211ACE8BF900C0C4D2 /* AppDelegate.swift in Sources */,
 			);
@@ -336,9 +438,16 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/CebTeaTime",
+				);
 				INFOPLIST_FILE = CebTeaTime/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "CebTeaTime/images/CebTeaTime-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -346,9 +455,15 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/CebTeaTime",
+				);
 				INFOPLIST_FILE = CebTeaTime/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "CebTeaTime/images/CebTeaTime-Bridging-Header.h";
 			};
 			name = Release;
 		};
@@ -405,6 +520,7 @@
 				B7EAC03C1ACE8BF900C0C4D2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		B7EAC03D1ACE8BF900C0C4D2 /* Build configuration list for PBXNativeTarget "CebTeaTimeTests" */ = {
 			isa = XCConfigurationList;
@@ -413,6 +529,7 @@
 				B7EAC03F1ACE8BF900C0C4D2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
