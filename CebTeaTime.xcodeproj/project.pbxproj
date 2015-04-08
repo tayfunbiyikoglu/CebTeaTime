@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B7D54A7B1AD3255F00A42468 /* UserTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7D54A7A1AD3255F00A42468 /* UserTableViewCell.swift */; };
+		B7D54A7D1AD3389F00A42468 /* UserHeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7D54A7C1AD3389F00A42468 /* UserHeaderCell.swift */; };
 		B7EAC0211ACE8BF900C0C4D2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7EAC0201ACE8BF900C0C4D2 /* AppDelegate.swift */; };
 		B7EAC0231ACE8BF900C0C4D2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7EAC0221ACE8BF900C0C4D2 /* ViewController.swift */; };
 		B7EAC0261ACE8BF900C0C4D2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B7EAC0241ACE8BF900C0C4D2 /* Main.storyboard */; };
@@ -36,6 +38,11 @@
 		B7EAC06B1ACE909900C0C4D2 /* turkish-tea-1.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = B7EAC06A1ACE909900C0C4D2 /* turkish-tea-1.jpeg */; };
 		B7FB15A51ACEA22C00C6DF78 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7FB15A41ACEA22C00C6DF78 /* SignUpViewController.swift */; };
 		B7FB15A71ACEA67100C6DF78 /* profile-rabbit-toy.png in Resources */ = {isa = PBXBuildFile; fileRef = B7FB15A61ACEA67100C6DF78 /* profile-rabbit-toy.png */; };
+		B7FB15A91AD0839500C6DF78 /* camera.png in Resources */ = {isa = PBXBuildFile; fileRef = B7FB15A81AD0839500C6DF78 /* camera.png */; };
+		B7FB15AB1AD1D89000C6DF78 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7FB15AA1AD1D89000C6DF78 /* HomeViewController.swift */; };
+		B7FB15AD1AD1D8A300C6DF78 /* WaitingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7FB15AC1AD1D8A300C6DF78 /* WaitingViewController.swift */; };
+		B7FB15AF1AD2BE4600C6DF78 /* UserTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7FB15AE1AD2BE4600C6DF78 /* UserTableViewController.swift */; };
+		B7FB15B11AD2BFCD00C6DF78 /* CALayer.png in Resources */ = {isa = PBXBuildFile; fileRef = B7FB15B01AD2BFCD00C6DF78 /* CALayer.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +56,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		B7D54A7A1AD3255F00A42468 /* UserTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserTableViewCell.swift; sourceTree = "<group>"; };
+		B7D54A7C1AD3389F00A42468 /* UserHeaderCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserHeaderCell.swift; sourceTree = "<group>"; };
 		B7EAC01B1ACE8BF900C0C4D2 /* CebTeaTime.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CebTeaTime.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B7EAC01F1ACE8BF900C0C4D2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B7EAC0201ACE8BF900C0C4D2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -83,6 +92,11 @@
 		B7EAC06C1ACE915700C0C4D2 /* CebTeaTime-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "CebTeaTime-Bridging-Header.h"; path = "images/CebTeaTime-Bridging-Header.h"; sourceTree = "<group>"; };
 		B7FB15A41ACEA22C00C6DF78 /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		B7FB15A61ACEA67100C6DF78 /* profile-rabbit-toy.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "profile-rabbit-toy.png"; sourceTree = "<group>"; };
+		B7FB15A81AD0839500C6DF78 /* camera.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = camera.png; sourceTree = "<group>"; };
+		B7FB15AA1AD1D89000C6DF78 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		B7FB15AC1AD1D8A300C6DF78 /* WaitingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WaitingViewController.swift; sourceTree = "<group>"; };
+		B7FB15AE1AD2BE4600C6DF78 /* UserTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserTableViewController.swift; sourceTree = "<group>"; };
+		B7FB15B01AD2BFCD00C6DF78 /* CALayer.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = CALayer.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -156,6 +170,11 @@
 				B7EAC0201ACE8BF900C0C4D2 /* AppDelegate.swift */,
 				B7EAC0221ACE8BF900C0C4D2 /* ViewController.swift */,
 				B7EAC0241ACE8BF900C0C4D2 /* Main.storyboard */,
+				B7FB15AE1AD2BE4600C6DF78 /* UserTableViewController.swift */,
+				B7D54A7C1AD3389F00A42468 /* UserHeaderCell.swift */,
+				B7D54A7A1AD3255F00A42468 /* UserTableViewCell.swift */,
+				B7FB15AA1AD1D89000C6DF78 /* HomeViewController.swift */,
+				B7FB15AC1AD1D8A300C6DF78 /* WaitingViewController.swift */,
 				B7FB15A41ACEA22C00C6DF78 /* SignUpViewController.swift */,
 				B7EAC0271ACE8BF900C0C4D2 /* Images.xcassets */,
 				B7EAC0291ACE8BF900C0C4D2 /* LaunchScreen.xib */,
@@ -194,9 +213,11 @@
 			isa = PBXGroup;
 			children = (
 				B7EAC0421ACE8CAE00C0C4D2 /* facebooklogin.png */,
+				B7FB15B01AD2BFCD00C6DF78 /* CALayer.png */,
 				B7EAC06A1ACE909900C0C4D2 /* turkish-tea-1.jpeg */,
 				B7EAC0431ACE8CAE00C0C4D2 /* profile-bg.png */,
 				B7EAC0441ACE8CAE00C0C4D2 /* tea1.png */,
+				B7FB15A81AD0839500C6DF78 /* camera.png */,
 				B7FB15A61ACEA67100C6DF78 /* profile-rabbit-toy.png */,
 				B7EAC0681ACE901100C0C4D2 /* turkish-tea2.jpg */,
 				B7EAC0451ACE8CAE00C0C4D2 /* tea2.png */,
@@ -293,8 +314,10 @@
 				B7EAC02B1ACE8BF900C0C4D2 /* LaunchScreen.xib in Resources */,
 				B7EAC0491ACE8CAE00C0C4D2 /* tea1.png in Resources */,
 				B7EAC0281ACE8BF900C0C4D2 /* Images.xcassets in Resources */,
+				B7FB15B11AD2BFCD00C6DF78 /* CALayer.png in Resources */,
 				B7EAC0471ACE8CAE00C0C4D2 /* facebooklogin.png in Resources */,
 				B7FB15A71ACEA67100C6DF78 /* profile-rabbit-toy.png in Resources */,
+				B7FB15A91AD0839500C6DF78 /* camera.png in Resources */,
 				B7EAC0481ACE8CAE00C0C4D2 /* profile-bg.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -313,9 +336,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B7FB15AD1AD1D8A300C6DF78 /* WaitingViewController.swift in Sources */,
 				B7FB15A51ACEA22C00C6DF78 /* SignUpViewController.swift in Sources */,
+				B7D54A7B1AD3255F00A42468 /* UserTableViewCell.swift in Sources */,
 				B7EAC0231ACE8BF900C0C4D2 /* ViewController.swift in Sources */,
 				B7EAC0211ACE8BF900C0C4D2 /* AppDelegate.swift in Sources */,
+				B7FB15AF1AD2BE4600C6DF78 /* UserTableViewController.swift in Sources */,
+				B7FB15AB1AD1D89000C6DF78 /* HomeViewController.swift in Sources */,
+				B7D54A7D1AD3389F00A42468 /* UserHeaderCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
