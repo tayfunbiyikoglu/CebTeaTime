@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B71C67181ADABF3700A92C99 /* logout_small.png in Resources */ = {isa = PBXBuildFile; fileRef = B71C67161ADABF3600A92C99 /* logout_small.png */; };
+		B71C67191ADABF3700A92C99 /* signout.png in Resources */ = {isa = PBXBuildFile; fileRef = B71C67171ADABF3700A92C99 /* signout.png */; };
+		B78309C41AD5E62F00F2E81C /* UserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B78309C31AD5E62F00F2E81C /* UserViewController.swift */; };
+		B78309C71ADAA32A00F2E81C /* glossy-green-button.png in Resources */ = {isa = PBXBuildFile; fileRef = B78309C51ADAA32A00F2E81C /* glossy-green-button.png */; };
+		B78309C81ADAA32A00F2E81C /* glossy-red-button.png in Resources */ = {isa = PBXBuildFile; fileRef = B78309C61ADAA32A00F2E81C /* glossy-red-button.png */; };
+		B78309CA1ADAA7F900F2E81C /* logout.png in Resources */ = {isa = PBXBuildFile; fileRef = B78309C91ADAA7F900F2E81C /* logout.png */; };
 		B7D54A7B1AD3255F00A42468 /* UserTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7D54A7A1AD3255F00A42468 /* UserTableViewCell.swift */; };
 		B7D54A7D1AD3389F00A42468 /* UserHeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7D54A7C1AD3389F00A42468 /* UserHeaderCell.swift */; };
 		B7EAC0211ACE8BF900C0C4D2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7EAC0201ACE8BF900C0C4D2 /* AppDelegate.swift */; };
@@ -43,6 +49,7 @@
 		B7FB15AD1AD1D8A300C6DF78 /* WaitingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7FB15AC1AD1D8A300C6DF78 /* WaitingViewController.swift */; };
 		B7FB15AF1AD2BE4600C6DF78 /* UserTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7FB15AE1AD2BE4600C6DF78 /* UserTableViewController.swift */; };
 		B7FB15B11AD2BFCD00C6DF78 /* CALayer.png in Resources */ = {isa = PBXBuildFile; fileRef = B7FB15B01AD2BFCD00C6DF78 /* CALayer.png */; };
+		B7FD605C1ADAD4CE00687609 /* BrewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7FD605B1ADAD4CE00687609 /* BrewViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +63,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		B71C67161ADABF3600A92C99 /* logout_small.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logout_small.png; sourceTree = "<group>"; };
+		B71C67171ADABF3700A92C99 /* signout.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = signout.png; sourceTree = "<group>"; };
+		B78309C31AD5E62F00F2E81C /* UserViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserViewController.swift; sourceTree = "<group>"; };
+		B78309C51ADAA32A00F2E81C /* glossy-green-button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "glossy-green-button.png"; sourceTree = "<group>"; };
+		B78309C61ADAA32A00F2E81C /* glossy-red-button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "glossy-red-button.png"; sourceTree = "<group>"; };
+		B78309C91ADAA7F900F2E81C /* logout.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logout.png; sourceTree = "<group>"; };
 		B7D54A7A1AD3255F00A42468 /* UserTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserTableViewCell.swift; sourceTree = "<group>"; };
 		B7D54A7C1AD3389F00A42468 /* UserHeaderCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserHeaderCell.swift; sourceTree = "<group>"; };
 		B7EAC01B1ACE8BF900C0C4D2 /* CebTeaTime.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CebTeaTime.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -97,6 +110,7 @@
 		B7FB15AC1AD1D8A300C6DF78 /* WaitingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WaitingViewController.swift; sourceTree = "<group>"; };
 		B7FB15AE1AD2BE4600C6DF78 /* UserTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserTableViewController.swift; sourceTree = "<group>"; };
 		B7FB15B01AD2BFCD00C6DF78 /* CALayer.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = CALayer.png; sourceTree = "<group>"; };
+		B7FD605B1ADAD4CE00687609 /* BrewViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BrewViewController.swift; path = ../BrewViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -170,6 +184,8 @@
 				B7EAC0201ACE8BF900C0C4D2 /* AppDelegate.swift */,
 				B7EAC0221ACE8BF900C0C4D2 /* ViewController.swift */,
 				B7EAC0241ACE8BF900C0C4D2 /* Main.storyboard */,
+				B78309C31AD5E62F00F2E81C /* UserViewController.swift */,
+				B7FD605B1ADAD4CE00687609 /* BrewViewController.swift */,
 				B7FB15AE1AD2BE4600C6DF78 /* UserTableViewController.swift */,
 				B7D54A7C1AD3389F00A42468 /* UserHeaderCell.swift */,
 				B7D54A7A1AD3255F00A42468 /* UserTableViewCell.swift */,
@@ -216,7 +232,12 @@
 				B7FB15B01AD2BFCD00C6DF78 /* CALayer.png */,
 				B7EAC06A1ACE909900C0C4D2 /* turkish-tea-1.jpeg */,
 				B7EAC0431ACE8CAE00C0C4D2 /* profile-bg.png */,
+				B71C67161ADABF3600A92C99 /* logout_small.png */,
+				B71C67171ADABF3700A92C99 /* signout.png */,
 				B7EAC0441ACE8CAE00C0C4D2 /* tea1.png */,
+				B78309C51ADAA32A00F2E81C /* glossy-green-button.png */,
+				B78309C61ADAA32A00F2E81C /* glossy-red-button.png */,
+				B78309C91ADAA7F900F2E81C /* logout.png */,
 				B7FB15A81AD0839500C6DF78 /* camera.png */,
 				B7FB15A61ACEA67100C6DF78 /* profile-rabbit-toy.png */,
 				B7EAC0681ACE901100C0C4D2 /* turkish-tea2.jpg */,
@@ -309,15 +330,20 @@
 				B7EAC0691ACE901100C0C4D2 /* turkish-tea2.jpg in Resources */,
 				B7EAC06B1ACE909900C0C4D2 /* turkish-tea-1.jpeg in Resources */,
 				B7EAC04B1ACE8CAE00C0C4D2 /* tea3.png in Resources */,
+				B71C67191ADABF3700A92C99 /* signout.png in Resources */,
 				B7EAC0261ACE8BF900C0C4D2 /* Main.storyboard in Resources */,
 				B7EAC04A1ACE8CAE00C0C4D2 /* tea2.png in Resources */,
 				B7EAC02B1ACE8BF900C0C4D2 /* LaunchScreen.xib in Resources */,
 				B7EAC0491ACE8CAE00C0C4D2 /* tea1.png in Resources */,
+				B78309CA1ADAA7F900F2E81C /* logout.png in Resources */,
 				B7EAC0281ACE8BF900C0C4D2 /* Images.xcassets in Resources */,
 				B7FB15B11AD2BFCD00C6DF78 /* CALayer.png in Resources */,
 				B7EAC0471ACE8CAE00C0C4D2 /* facebooklogin.png in Resources */,
+				B78309C71ADAA32A00F2E81C /* glossy-green-button.png in Resources */,
+				B78309C81ADAA32A00F2E81C /* glossy-red-button.png in Resources */,
 				B7FB15A71ACEA67100C6DF78 /* profile-rabbit-toy.png in Resources */,
 				B7FB15A91AD0839500C6DF78 /* camera.png in Resources */,
+				B71C67181ADABF3700A92C99 /* logout_small.png in Resources */,
 				B7EAC0481ACE8CAE00C0C4D2 /* profile-bg.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -337,10 +363,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				B7FB15AD1AD1D8A300C6DF78 /* WaitingViewController.swift in Sources */,
+				B78309C41AD5E62F00F2E81C /* UserViewController.swift in Sources */,
 				B7FB15A51ACEA22C00C6DF78 /* SignUpViewController.swift in Sources */,
 				B7D54A7B1AD3255F00A42468 /* UserTableViewCell.swift in Sources */,
 				B7EAC0231ACE8BF900C0C4D2 /* ViewController.swift in Sources */,
 				B7EAC0211ACE8BF900C0C4D2 /* AppDelegate.swift in Sources */,
+				B7FD605C1ADAD4CE00687609 /* BrewViewController.swift in Sources */,
 				B7FB15AF1AD2BE4600C6DF78 /* UserTableViewController.swift in Sources */,
 				B7FB15AB1AD1D89000C6DF78 /* HomeViewController.swift in Sources */,
 				B7D54A7D1AD3389F00A42468 /* UserHeaderCell.swift in Sources */,

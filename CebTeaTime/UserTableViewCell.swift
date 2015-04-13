@@ -14,6 +14,7 @@ class UserTableViewCell: UITableViewCell {
     @IBOutlet weak var profilePic: UIImageView!
     @IBOutlet weak var gender: UILabel!
     @IBOutlet weak var name: UILabel!
+    @IBOutlet weak var statusButton: UIImageView!
     
     
     override func awakeFromNib() {

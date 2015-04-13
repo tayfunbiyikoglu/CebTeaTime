@@ -11,10 +11,10 @@ import UIKit
 class UserTableViewController: UITableViewController {
 
 
-    var parseUsers = [PFUser]()
+//    var parseUsers = [PFUser]()
     var users = [Brewer]()
     var brewers:NSArray = NSArray()
-    
+    var refresher: UIRefreshControl!
 
     class Brewer:NSObject {
         
@@ -23,7 +23,7 @@ class UserTableViewController: UITableViewController {
         
          init(user:PFUser){
             self.user = user
-            self.userName = user["name"] as String
+            self.userName = user["name"] as! String
         }
     }
     
@@ -35,9 +35,10 @@ class UserTableViewController: UITableViewController {
             (objects: [AnyObject]!, error: NSError!) -> Void in
             if error == nil {
                 
+                self.users.removeAll(keepCapacity: true)
                 for user in objects {
-                    self.parseUsers.append(user as PFUser)
-                    self.users.append(Brewer(user: user as PFUser))
+//                    self.parseUsers.append(user as PFUser)
+                    self.users.append(Brewer(user: user as! PFUser))
                 }
                 
                 self.brewers = self.partitionObjects(self.users as NSArray, collationStringSelector: "userName")
@@ -47,17 +48,22 @@ class UserTableViewController: UITableViewController {
             }else{
                 println(error)
             }
-            
+            self.refresher.endRefreshing()
         }
 
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
         title = "Users"
-        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Share", style: .Bordered, target: self, action: "shareTapped:")
-        loadUsers()
+//        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Share", style: .Bordered, target: self, action: "shareTapped:")
+//        loadUsers()
+        
+        refresher = UIRefreshControl()
+        refresher.attributedTitle = NSAttributedString(string: "Pull To Refresh")
+        refresher.addTarget(self, action: "loadUsers", forControlEvents: UIControlEvents.ValueChanged)
+        self.tableView.addSubview(refresher)
         
     }
 
@@ -72,9 +78,8 @@ class UserTableViewController: UITableViewController {
         // #warning Potentially incomplete method implementation.
         // Return the number of sections.
          var numberOfSections = UILocalizedIndexedCollation.currentCollation().sectionTitles.count
-                //println("numberOfSections: \(numberOfSections)")
+
          return numberOfSections
-//        return 1
         
     }
 
@@ -83,48 +88,45 @@ class UserTableViewController: UITableViewController {
         // Return the number of rows in the section.
         
         return (brewers.count > 0) ? brewers.objectAtIndex(section).count : 0
-//        return parseUsers.count
     }
     
     
-//    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-//        let cell = tableView.dequeueReusableCellWithIdentifier("UserCell") as UserTableViewCell
-//        let row = indexPath.row
-//        var  user:AnyObject = parseUsers[indexPath.row]
-//        
-//        cell.name.text = user["name"] as NSString
-//        cell.gender.text = decideStatus(user["approved"] as String)
-//        cell.profilePic!.image =  UIImage(data: user["image"] as NSData)
-//        
-//        if user["approved"]  as NSString == "1" {
-//            cell.gender.backgroundColor = UIColor.greenColor()
-//        }else{
-//            cell.gender.backgroundColor = UIColor.redColor()
-//        }
-//        
-//        
-//        return cell
-//    }
+    override func viewDidAppear(animated: Bool) {
+        loadUsers()
+    }
+
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+            
+            if segue.identifier == "showUserDetails" {
+                let userViewController = segue.destinationViewController  as! UserViewController
+                
+                let myIndexPath = self.tableView.indexPathForSelectedRow()
+                let row = myIndexPath?.row
+                let section = myIndexPath?.section
+                let brewer:Brewer = brewers[section!][row!] as! Brewer
+                userViewController.selectedUser = brewers[section!][row!] as? Brewer
+            }
+    }
+
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("UserCell", forIndexPath: indexPath) as UserTableViewCell
+        let cell = tableView.dequeueReusableCellWithIdentifier("UserCell", forIndexPath: indexPath) as! UserTableViewCell
         
         if(brewers.count > 0){
             
-            let brewer:Brewer = brewers[indexPath.section][indexPath.row] as Brewer
-            println(brewer.userName)
-            
+            let brewer:Brewer = brewers[indexPath.section][indexPath.row] as! Brewer
             let user:PFUser = brewer.user           
             
-            cell.name.text = user["name"] as NSString
-            cell.gender.text = decideStatus(user["approved"] as String)
-            cell.profilePic!.image =  UIImage(data: user["image"] as NSData)
+            cell.name.text = user["name"] as? String
+            cell.gender.text = user["gender"] as? String
+            cell.profilePic!.image =  UIImage(data: user["image"] as! NSData)
             
-            if user["approved"]  as NSString == "1" {
-                cell.gender.backgroundColor = UIColor.greenColor()
+            if user["approved"]  as! NSString == "1" {
+                cell.statusButton.image = UIImage(named: "glossy-green-button")
             }else{
-                 cell.gender.backgroundColor = UIColor.redColor()
+                cell.statusButton.image = UIImage(named: "glossy-red-button")
             }
+
           
    
         }
@@ -145,7 +147,7 @@ class UserTableViewController: UITableViewController {
     
     func partitionObjects(array:NSArray, collationStringSelector:Selector) -> NSArray{
         
-        let collation:UILocalizedIndexedCollation = UILocalizedIndexedCollation.currentCollation() as UILocalizedIndexedCollation
+        let collation:UILocalizedIndexedCollation = UILocalizedIndexedCollation.currentCollation() as! UILocalizedIndexedCollation
         
         //section count is take from sectionTitles and not sectionIndexTitles
         let sectionCount = collation.sectionTitles.count
@@ -168,7 +170,7 @@ class UserTableViewController: UITableViewController {
         
         //sort each section
         for section in unsortedSections{
-            sections.addObject(collation.sortedArrayFromArray(section as NSMutableArray, collationStringSelector: collationStringSelector))
+            sections.addObject(collation.sortedArrayFromArray(section as! NSMutableArray as [AnyObject], collationStringSelector: collationStringSelector))
         }
         
         return sections;
@@ -184,6 +186,17 @@ class UserTableViewController: UITableViewController {
     
     override func sectionIndexTitlesForTableView(tableView: UITableView) -> [AnyObject]! {
         return UILocalizedIndexedCollation.currentCollation().sectionIndexTitles
+    }
+    
+    /* section headers appear above each `UITableView` section */
+    override func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String {
+            // do not display empty `Section`s
+        if self.brewers.count > 0 {
+            if self.brewers[section].count > 0 {
+                return UILocalizedIndexedCollation.currentCollation().sectionTitles[section] as! String
+            }
+        }
+        return ""
     }
     
     /*

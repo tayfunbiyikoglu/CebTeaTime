@@ -36,7 +36,7 @@ class WaitingViewController: UIViewController {
                     NSLog("Successfully retrieved \(user.objectId) user.")
                     
                     
-                    var userVerified = user.objectForKey("approved") as NSString
+                    var userVerified = user.objectForKey("approved") as! NSString
                     println(userVerified)
                     
                     if(userVerified == "1"){

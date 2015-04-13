@@ -15,11 +15,39 @@ class HomeViewController: UIViewController {
     }
     
     
-    @IBAction func logOff(sender: UIButton) {
-        PFUser.logOut()
-        self.performSegueWithIdentifier("login", sender: nil)
+    @IBAction func brew(sender: UIButton) {
+        self.performSegueWithIdentifier("brew", sender: nil)
     }
     
+    
+    @IBAction func signOut(sender: UIBarButtonItem) {
+        
+        let optionMenu = UIAlertController(title: nil, message: "Are you sure you want to log out?", preferredStyle: .ActionSheet)
+        
+        // 2
+        let deleteAction = UIAlertAction(title: "log out", style: UIAlertActionStyle.Destructive, handler: {
+            (alert: UIAlertAction!) -> Void in
+            println("User logged out")
+            PFUser.logOut()
+            self.performSegueWithIdentifier("login", sender: nil)
+        })
+        
+        //
+        let cancelAction = UIAlertAction(title: "Cancel", style: .Cancel, handler: {
+            (alert: UIAlertAction!) -> Void in
+            println("Cancelled")
+        })
+        
+        
+        // 4
+        optionMenu.addAction(deleteAction)
+        optionMenu.addAction(cancelAction)
+        
+        // 5
+        self.presentViewController(optionMenu, animated: true, completion: nil)
+       
+
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,6 +61,11 @@ class HomeViewController: UIViewController {
     }
     
     override func viewDidAppear(animated: Bool) {
+//            var nav = self.navigationController?.navigationBar
+//            nav?.barStyle = UIBarStyle.Black
+//            nav?.tintColor = UIColor.redColor()
+            title = "Tea Track"
+
         if PFUser.currentUser() == nil {
             self.performSegueWithIdentifier("login", sender: nil)
         }
