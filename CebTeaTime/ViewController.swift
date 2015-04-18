@@ -22,7 +22,7 @@ class ViewController: UIViewController {
 
         self.image.layer.cornerRadius = self.image.frame.size.width / 2;
         self.image.layer.borderWidth = 3.0;
-        self.image.layer.borderColor = UIColor.whiteColor().CGColor
+        self.image.layer.borderColor = UIColor.grayColor().CGColor
         self.image.clipsToBounds = true
 
         
@@ -79,8 +79,9 @@ class ViewController: UIViewController {
                     println(userVerified)
                     
                     if(userVerified == "1"){
-//                        self.performSegueWithIdentifier("home", sender: self)
-                        self.dismissViewControllerAnimated(true, completion:nil)
+                      
+                        self.dismissViewControllerAnimated(true, completion: nil)
+                        
                         println("User is verified")
                     }else{
                         self.performSegueWithIdentifier("waiting", sender: self)                    }

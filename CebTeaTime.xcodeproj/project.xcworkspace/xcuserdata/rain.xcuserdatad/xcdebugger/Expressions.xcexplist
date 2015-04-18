@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<VariablesViewState
+   version = "1.0">
+   <ContextStates>
+      <ContextState
+         contextName = "CebTeaTime.UserTableViewController.tableView (CebTeaTime.UserTableViewController)(ObjectiveC.UITableView, titleForHeaderInSection : Swift.Int) -&gt; Swift.String:UserTableViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "self.brewers[section]">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "CebTeaTime.UserTableViewController.Brewer.init (CebTeaTime.UserTableViewController.Brewer.Type)(user : ObjectiveC.PFUser) -&gt; CebTeaTime.UserTableViewController.Brewer:UserTableViewController.swift">
+      </ContextState>
+      <ContextState
+         contextName = "CebTeaTime.ViewController.proceedNextScreen (CebTeaTime.ViewController)() -&gt; ():ViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "PFUser.currentUser().objectId">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "CebTeaTime.UserTableViewController.viewDidLoad (CebTeaTime.UserTableViewController)() -&gt; ():UserTableViewController.swift">
+      </ContextState>
+      <ContextState
+         contextName = "CebTeaTime.UserTableViewController.partitionObjects (CebTeaTime.UserTableViewController)(ObjectiveC.NSArray, collationStringSelector : ObjectiveC.Selector) -&gt; ObjectiveC.NSArray:UserTableViewController.swift">
+      </ContextState>
+      <ContextState
+         contextName = "CebTeaTime.UserTableViewController.tableView (CebTeaTime.UserTableViewController)(ObjectiveC.UITableView, cellForRowAtIndexPath : ObjectiveC.NSIndexPath) -&gt; ObjectiveC.UITableViewCell:UserTableViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "CebTeaTime.UserTableViewController.prepareForSegue (CebTeaTime.UserTableViewController)(ObjectiveC.UIStoryboardSegue, sender : Swift.Optional&lt;Swift.AnyObject&gt;) -&gt; ():UserTableViewController.swift">
+      </ContextState>
+      <ContextState
+         contextName = "CebTeaTime.UserTableViewController.tableView (CebTeaTime.UserTableViewController)(ObjectiveC.UITableView, numberOfRowsInSection : Swift.Int) -&gt; Swift.Int:UserTableViewController.swift">
+      </ContextState>
+      <ContextState
+         contextName = "CebTeaTime.UserTableViewController.(loadUsers (CebTeaTime.UserTableViewController) -&gt; () -&gt; ()).(closure #1):UserTableViewController.swift">
+      </ContextState>
+   </ContextStates>
+</VariablesViewState>

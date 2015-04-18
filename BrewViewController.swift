@@ -34,6 +34,7 @@ class BrewViewController: UIViewController {
     
     var user = PFUser.currentUser()
     
+    
     @IBAction func brew(sender: UIButton) {
         
         let flags: NSCalendarUnit = NSCalendarUnit.CalendarUnitMonth | NSCalendarUnit.CalendarUnitWeekOfYear
@@ -68,11 +69,6 @@ class BrewViewController: UIViewController {
         screenDate.text = formatter.stringFromDate(date)
         let myWeekday = NSCalendar.currentCalendar().components(NSCalendarUnit.CalendarUnitWeekday, fromDate: date).weekday
         dateName.text = Weekdays(rawValue: myWeekday)?.name()
-
-//        var query = PFQuery(className: "Brewing")
-//        query.orderByDescending("brewTime")
-//        var obj = query.getFirstObject()
-//        timePicker.date = obj["brewTime"] as! NSDate
         
         circulizeImage()
         timePicker.minimumDate = date.dateByAddingTimeInterval(buffer)

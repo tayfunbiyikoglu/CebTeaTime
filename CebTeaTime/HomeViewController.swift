@@ -9,7 +9,55 @@
 import UIKit
 
 class HomeViewController: UIViewController {
+    
+    enum TeaStates {
+        case NoTea, Brewing, Brewed
+        
+        init(){
+            self = .NoTea
+        }
+    }
+    
+    class BrewInfo {
+        
+        var brewDate:NSDate
+        var brewUser:PFUser
+        var teaState:TeaStates {
+            let mins = NSDate().minutesFrom(brewDate)
+            println("\(mins)")
+            switch mins {
+            case 0..<16 : return .Brewing
+            case 16...130 : return .Brewed
+            default:  return .NoTea
+            }
 
+        }
+        
+        init(brewing: PFObject){
+            self.brewDate = brewing.objectForKey("brewDateTime") as! NSDate
+            self.brewUser = brewing.objectForKey("user") as! PFUser
+        }
+        
+        func explanation() -> String {
+            switch self.teaState {
+            case .NoTea: return "We don't have tea"
+            case .Brewing: return "Tea will be ready in \(16 - NSDate().minutesFrom(brewDate))"
+            case .Brewed: return "We have tea"
+            }
+        }
+        
+        class func last() -> BrewInfo {
+            var query = PFQuery(className: "Brewing")
+            query.orderByDescending("brewDateTime")
+            return BrewInfo(brewing: query.getFirstObject())
+        }
+    }
+    
+    @IBOutlet weak var statusView: UIView!
+    
+    
+    @IBOutlet weak var explanationLabel: UILabel!
+    
     @IBAction func goToUsers(sender: UIButton) {
         self.performSegueWithIdentifier("users", sender: self)
     }
@@ -49,8 +97,21 @@ class HomeViewController: UIViewController {
 
     }
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+
+        var brewInfo = BrewInfo.last()
+        println("\(brewInfo.brewDate) - \(brewInfo.brewUser) - \(brewInfo.teaState)")
+        
+        explanationLabel.text = brewInfo.explanation()
+        
+        switch brewInfo.teaState {
+            case .NoTea: statusView.backgroundColor = UIColor.redColor()
+            case .Brewed: statusView.backgroundColor = UIColor.greenColor()
+            case .Brewing: statusView.backgroundColor = UIColor.yellowColor()
+        }
+        
         
         // Do any additional setup after loading the view.
     }
@@ -64,7 +125,25 @@ class HomeViewController: UIViewController {
 //            var nav = self.navigationController?.navigationBar
 //            nav?.barStyle = UIBarStyle.Black
 //            nav?.tintColor = UIColor.redColor()
-            title = "Tea Track"
+//        let imageView = UIImageView(frame: CGRect(x: 0, y: 0, width: 20, height: 20))
+//        
+//        // 4
+//        let image = UIImage(data: PFUser.currentUser()["image"] as! NSData)
+//                // 5
+//        
+//        
+//        
+//        imageView.layer.cornerRadius = 10;
+//        imageView.layer.borderWidth = 1.0;
+//        imageView.layer.borderColor = UIColor.grayColor().CGColor
+//        imageView.clipsToBounds = true
+//
+//        imageView.image = image
+//        
+//        navigationItem.titleView = imageView
+        
+
+        title = "Tea Track"
 
         if PFUser.currentUser() == nil {
             self.performSegueWithIdentifier("login", sender: nil)

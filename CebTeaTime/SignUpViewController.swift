@@ -32,8 +32,14 @@ class SignUpViewController: UIViewController, UINavigationControllerDelegate, UI
     @IBAction func signUp(sender: UIButton) {
         
         var user = PFUser.currentUser()
-        user["image"] = UIImagePNGRepresentation(profileImage.image)
-        user.save()
+//        user["image"] = UIImagePNGRepresentation(profileImage.image)
+//        user.save()
+        profileImage.image?.resize(CGSizeMake(150, 150), completionHandler: {
+            response, data in
+                user["image"] = data
+                user.save()
+        })
+        
         self.performSegueWithIdentifier("waiting", sender: self)
 
     }
@@ -104,7 +110,7 @@ class SignUpViewController: UIViewController, UINavigationControllerDelegate, UI
         
         self.profileImage.layer.cornerRadius = self.profileImage.frame.size.width / 2;
         self.profileImage.layer.borderWidth = 5.0;
-        self.profileImage.layer.borderColor = UIColor.whiteColor().CGColor
+        self.profileImage.layer.borderColor = UIColor.grayColor().CGColor
         self.profileImage.clipsToBounds = true
 
         
@@ -130,6 +136,7 @@ class SignUpViewController: UIViewController, UINavigationControllerDelegate, UI
             
             user["image"] = data
             user["approved"] = "0"
+            user["isAdmin"] = "0"
             
             user.save()
             
@@ -156,7 +163,7 @@ class SignUpViewController: UIViewController, UINavigationControllerDelegate, UI
         // Do any additional setup after loading the view.
     }
     
-    func imagePickerController(picker: UIImagePickerController!, didFinishPickingImage image: UIImage!, editingInfo: [NSObject : AnyObject]!) {
+    func imagePickerController(picker: UIImagePickerController, didFinishPickingImage image: UIImage!, editingInfo: [NSObject : AnyObject]!) {
         println("image Selected")
         self.dismissViewControllerAnimated(true, completion: nil)
         profileImage.image = image
