@@ -13,6 +13,8 @@
 		B78309C71ADAA32A00F2E81C /* glossy-green-button.png in Resources */ = {isa = PBXBuildFile; fileRef = B78309C51ADAA32A00F2E81C /* glossy-green-button.png */; };
 		B78309C81ADAA32A00F2E81C /* glossy-red-button.png in Resources */ = {isa = PBXBuildFile; fileRef = B78309C61ADAA32A00F2E81C /* glossy-red-button.png */; };
 		B78309CA1ADAA7F900F2E81C /* logout.png in Resources */ = {isa = PBXBuildFile; fileRef = B78309C91ADAA7F900F2E81C /* logout.png */; };
+		B7CF677F1AFFA7A600D98C8A /* BrewingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7CF677E1AFFA7A600D98C8A /* BrewingsViewController.swift */; };
+		B7CF67811AFFF8A700D98C8A /* BrewingsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7CF67801AFFF8A700D98C8A /* BrewingsTableViewCell.swift */; };
 		B7D54A7B1AD3255F00A42468 /* UserTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7D54A7A1AD3255F00A42468 /* UserTableViewCell.swift */; };
 		B7D54A7D1AD3389F00A42468 /* UserHeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7D54A7C1AD3389F00A42468 /* UserHeaderCell.swift */; };
 		B7EAC0211ACE8BF900C0C4D2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7EAC0201ACE8BF900C0C4D2 /* AppDelegate.swift */; };
@@ -67,6 +69,8 @@
 		B78309C51ADAA32A00F2E81C /* glossy-green-button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "glossy-green-button.png"; sourceTree = "<group>"; };
 		B78309C61ADAA32A00F2E81C /* glossy-red-button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "glossy-red-button.png"; sourceTree = "<group>"; };
 		B78309C91ADAA7F900F2E81C /* logout.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logout.png; sourceTree = "<group>"; };
+		B7CF677E1AFFA7A600D98C8A /* BrewingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BrewingsViewController.swift; sourceTree = "<group>"; };
+		B7CF67801AFFF8A700D98C8A /* BrewingsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BrewingsTableViewCell.swift; sourceTree = "<group>"; };
 		B7D54A7A1AD3255F00A42468 /* UserTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserTableViewCell.swift; sourceTree = "<group>"; };
 		B7D54A7C1AD3389F00A42468 /* UserHeaderCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserHeaderCell.swift; sourceTree = "<group>"; };
 		B7EAC01B1ACE8BF900C0C4D2 /* CebTeaTime.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CebTeaTime.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -181,11 +185,13 @@
 				B7EAC0221ACE8BF900C0C4D2 /* ViewController.swift */,
 				B7FD605D1ADDACF900687609 /* DateExtensions.swift */,
 				B7EAC0241ACE8BF900C0C4D2 /* Main.storyboard */,
+				B7CF677E1AFFA7A600D98C8A /* BrewingsViewController.swift */,
 				B78309C31AD5E62F00F2E81C /* UserViewController.swift */,
 				B7FD605B1ADAD4CE00687609 /* BrewViewController.swift */,
 				B7FB15AE1AD2BE4600C6DF78 /* UserTableViewController.swift */,
 				B7D54A7C1AD3389F00A42468 /* UserHeaderCell.swift */,
 				B7D54A7A1AD3255F00A42468 /* UserTableViewCell.swift */,
+				B7CF67801AFFF8A700D98C8A /* BrewingsTableViewCell.swift */,
 				B7FB15AA1AD1D89000C6DF78 /* HomeViewController.swift */,
 				B7FB15AC1AD1D8A300C6DF78 /* WaitingViewController.swift */,
 				B7FB15A41ACEA22C00C6DF78 /* SignUpViewController.swift */,
@@ -357,6 +363,7 @@
 				B7FB15AD1AD1D8A300C6DF78 /* WaitingViewController.swift in Sources */,
 				B78309C41AD5E62F00F2E81C /* UserViewController.swift in Sources */,
 				B7FB15A51ACEA22C00C6DF78 /* SignUpViewController.swift in Sources */,
+				B7CF67811AFFF8A700D98C8A /* BrewingsTableViewCell.swift in Sources */,
 				B7D54A7B1AD3255F00A42468 /* UserTableViewCell.swift in Sources */,
 				B7FD605E1ADDACF900687609 /* DateExtensions.swift in Sources */,
 				B7EAC0231ACE8BF900C0C4D2 /* ViewController.swift in Sources */,
@@ -365,6 +372,7 @@
 				B7FB15AF1AD2BE4600C6DF78 /* UserTableViewController.swift in Sources */,
 				B7FB15AB1AD1D89000C6DF78 /* HomeViewController.swift in Sources */,
 				B7D54A7D1AD3389F00A42468 /* UserHeaderCell.swift in Sources */,
+				B7CF677F1AFFA7A600D98C8A /* BrewingsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -442,9 +450,10 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				MTL_ENABLE_DEBUG_INFO = YES;
-				ONLY_ACTIVE_ARCH = YES;
+				ONLY_ACTIVE_ARCH = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				VERSIONING_SYSTEM = "";
 			};
 			name = Debug;
 		};
@@ -467,6 +476,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = "";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -478,8 +488,10 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				MTL_ENABLE_DEBUG_INFO = NO;
+				ONLY_ACTIVE_ARCH = NO;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
 			};
 			name = Release;
 		};
@@ -488,14 +500,17 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: tayfun biyikoglu (3V4P44AEG7)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: tayfun biyikoglu (3V4P44AEG7)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/CebTeaTime",
 				);
 				INFOPLIST_FILE = CebTeaTime/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "1ac69b70-be3f-4515-833c-c9fbe9411ac9";
 				SWIFT_OBJC_BRIDGING_HEADER = "CebTeaTime/images/CebTeaTime-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
@@ -506,14 +521,17 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: tayfun biyikoglu (3V4P44AEG7)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: tayfun biyikoglu (3V4P44AEG7)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/CebTeaTime",
 				);
 				INFOPLIST_FILE = CebTeaTime/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "1ac69b70-be3f-4515-833c-c9fbe9411ac9";
 				SWIFT_OBJC_BRIDGING_HEADER = "CebTeaTime/images/CebTeaTime-Bridging-Header.h";
 			};
 			name = Release;

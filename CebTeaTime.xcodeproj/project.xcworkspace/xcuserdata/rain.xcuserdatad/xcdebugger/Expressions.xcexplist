@@ -11,6 +11,14 @@
          </PersistentStrings>
       </ContextState>
       <ContextState
+         contextName = "CebTeaTime.HomeViewController.refreshUI (CebTeaTime.HomeViewController)() -&gt; ():HomeViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "brewInfo">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
          contextName = "CebTeaTime.UserTableViewController.Brewer.init (CebTeaTime.UserTableViewController.Brewer.Type)(user : ObjectiveC.PFUser) -&gt; CebTeaTime.UserTableViewController.Brewer:UserTableViewController.swift">
       </ContextState>
       <ContextState

@@ -28,11 +28,51 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         
         
+        application.applicationIconBadgeNumber = 0
         Parse.setApplicationId("qyMjAwkhLDDcwFt9gedcWplmZOBqxJjhxHa0yjfv", clientKey: "vf489jsQdkoQHdp5B0SAvB1jmLiYwTekj64RKt12")
         
         PFFacebookUtils.initializeFacebook()
         
+
+//        let userNotificationTypes = (UIUserNotificationType.Alert |  UIUserNotificationType.Badge |  UIUserNotificationType.Sound);
+//        
+//        let settings = UIUserNotificationSettings(forTypes: userNotificationTypes, categories: nil)
+//        application.registerUserNotificationSettings(settings)
+//        application.registerForRemoteNotifications()
+        
+        // Register for Push Notitications, if running iOS 8
+        if application.respondsToSelector("registerUserNotificationSettings:") {
+            let types:UIUserNotificationType = (.Alert | .Badge | .Sound)
+            let settings:UIUserNotificationSettings = UIUserNotificationSettings(forTypes: types, categories: nil)
+            
+            application.registerUserNotificationSettings(settings)
+            application.registerForRemoteNotifications()
+            
+        } else {
+            // Register for Push Notifications before iOS 8
+            application.registerForRemoteNotificationTypes(.Alert | .Badge | .Sound)
+        }
+
+        
+        
         return true
+    }
+    
+    func application(application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: NSData) {
+        println("didRegisterForRemoteNotificationsWithDeviceToken")
+        
+        let currentInstallation = PFInstallation.currentInstallation()
+        
+        currentInstallation.setDeviceTokenFromData(deviceToken)
+        currentInstallation.channels = ["ceb"]
+        currentInstallation.saveInBackgroundWithBlock { (succeeded, e) -> Void in
+            //code
+        }
+
+    }
+    
+    func application(application: UIApplication, didFailToRegisterForRemoteNotificationsWithError error: NSError) {
+         println("failed to register for remote notifications:  \(error)")
     }
     
     // Changed UIApplication! to UIApplication
@@ -53,6 +93,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func applicationWillEnterForeground(application: UIApplication) {
         // Called as part of the transition from the background to the inactive state; here you can undo many of the changes made on entering the background.
+        application.applicationIconBadgeNumber = 0
     }
     
     // Changed UIApplication! to UIApplication
@@ -84,6 +125,32 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
     }
     
+    func application(application: UIApplication, didReceiveRemoteNotification userInfo: [NSObject : AnyObject]) {
+        println("didReceiveRemoteNotification")
+        PFPush.handlePush(userInfo)
+        var brewInfo = HomeViewController.BrewInfo.last()
+        var date = NSDate()
+        let minsToBrew = 18 - date.minutesFrom(brewInfo.brewDate)
+        var brewUser = brewInfo.brewUser as PFUser
+        var brewedBy = brewUser["name"] as! String
+        var nameArray = brewedBy.componentsSeparatedByString(" ")
+        let secondsToBrew:Int = 60 * minsToBrew
+        var localNotification = UILocalNotification()
+        println("\(secondsToBrew) seconds")
+        localNotification.fireDate = NSDate(timeIntervalSinceNow: NSTimeInterval(secondsToBrew))
+        localNotification.alertBody = "Tea brewed by \(nameArray[0]) is ready, enjoy.."
+        localNotification.timeZone = NSTimeZone.defaultTimeZone()
+        localNotification.applicationIconBadgeNumber = UIApplication.sharedApplication().applicationIconBadgeNumber + 1
+        
+        application.scheduleLocalNotification(localNotification)
+        
+        
+    }
+    
+    func application(application: UIApplication, didReceiveLocalNotification notification: UILocalNotification) {
+        println("didReceiveLocalNotification")
+        application.applicationIconBadgeNumber = 0
+    }
     
     
 }

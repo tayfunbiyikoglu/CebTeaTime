@@ -41,6 +41,10 @@ class BrewViewController: UIViewController {
         let dateComponent = NSCalendar.currentCalendar().components(flags, fromDate: timePicker.date)
         let month = dateComponent.month
         let week = dateComponent.weekOfYear
+        let year = getYear(timePicker.date)
+        var formatter = NSDateFormatter()
+        
+        formatter.dateFormat = "yyyy-MM-dd"
         
         var brewing = PFObject(className: "Brewing")
         
@@ -49,11 +53,32 @@ class BrewViewController: UIViewController {
         brewing["operationDateTime"] = NSDate()
         brewing["week"] = week
         brewing["month"] = month
+        brewing["brewDate"] = formatter.stringFromDate(timePicker.date)
+        brewing["year"] = year
         
         brewing.saveInBackground()
         
+        var push = PFPush()
+        push.setChannel("ceb")
+        var username:String = user.objectForKey("name") as! String
+        push.setMessage("\(username) has just brewed tea for you.")
+//        push.sendPushInBackground()
+    
+        push.sendPushInBackgroundWithBlock({
+            (isSuccessfull: Bool, error: NSError!) -> Void in
+            
+                println(isSuccessfull)
+        })
+        
         self.performSegueWithIdentifier("home", sender: nil)
         
+
+    }
+    
+    func getYear(date:NSDate) -> Int {
+        var formatter = NSDateFormatter()
+        formatter.dateFormat = "yyyy"
+        return formatter.stringFromDate(date).toInt()!
 
     }
     

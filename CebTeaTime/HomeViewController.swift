@@ -22,15 +22,19 @@ class HomeViewController: UIViewController {
         
         var brewDate:NSDate
         var brewUser:PFUser
+        var minsPassed:Int = 0
+        var minsFromLastBrew:Int {
+            return NSDate().minutesFrom(brewDate)
+        }
+        
         var teaState:TeaStates {
-            let mins = NSDate().minutesFrom(brewDate)
-            println("\(mins)")
+            let mins = minsFromLastBrew
+//            println("\(mins)")
             switch mins {
-            case 0..<16 : return .Brewing
-            case 16...130 : return .Brewed
+            case 0..<18 : return .Brewing
+            case 18...100 : return .Brewed
             default:  return .NoTea
             }
-
         }
         
         init(brewing: PFObject){
@@ -38,16 +42,31 @@ class HomeViewController: UIViewController {
             self.brewUser = brewing.objectForKey("user") as! PFUser
         }
         
+        func oneMinutePassed(){
+            minsPassed++
+        }
+        
         func explanation() -> String {
             switch self.teaState {
-            case .NoTea: return "We don't have tea"
-            case .Brewing: return "Tea will be ready in \(16 - NSDate().minutesFrom(brewDate))"
-            case .Brewed: return "We have tea"
+            case .NoTea: return "Sorry, we don't have tea"
+            case .Brewing: return "Tea will be ready in \(18 - minsFromLastBrew) min(s)"
+            case .Brewed:
+                if(minsFromLastBrew == 18){
+                    return "Tea has just brewed, enjoy.."
+                }else{
+                    return "We have tea since \(minsFromLastBrew-18) min(s)"
+                }
+                
             }
+        }
+        
+        func nonBrewable() -> Bool {
+            return self.teaState != .NoTea
         }
         
         class func last() -> BrewInfo {
             var query = PFQuery(className: "Brewing")
+            query.includeKey("user")
             query.orderByDescending("brewDateTime")
             return BrewInfo(brewing: query.getFirstObject())
         }
@@ -55,8 +74,13 @@ class HomeViewController: UIViewController {
     
     @IBOutlet weak var statusView: UIView!
     
+    @IBOutlet weak var brewButton: UIButton!
     
     @IBOutlet weak var explanationLabel: UILabel!
+    
+    var brewInfo:BrewInfo?
+    
+    var timer = NSTimer()
     
     @IBAction func goToUsers(sender: UIButton) {
         self.performSegueWithIdentifier("users", sender: self)
@@ -68,6 +92,10 @@ class HomeViewController: UIViewController {
     }
     
     
+    @IBAction func brewings(sender: UIButton) {
+        self.performSegueWithIdentifier("brewings", sender: nil)
+    }
+    
     @IBAction func signOut(sender: UIBarButtonItem) {
         
         let optionMenu = UIAlertController(title: nil, message: "Are you sure you want to log out?", preferredStyle: .ActionSheet)
@@ -75,7 +103,6 @@ class HomeViewController: UIViewController {
         // 2
         let deleteAction = UIAlertAction(title: "log out", style: UIAlertActionStyle.Destructive, handler: {
             (alert: UIAlertAction!) -> Void in
-            println("User logged out")
             PFUser.logOut()
             self.performSegueWithIdentifier("login", sender: nil)
         })
@@ -83,7 +110,6 @@ class HomeViewController: UIViewController {
         //
         let cancelAction = UIAlertAction(title: "Cancel", style: .Cancel, handler: {
             (alert: UIAlertAction!) -> Void in
-            println("Cancelled")
         })
         
         
@@ -100,65 +126,58 @@ class HomeViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        var brewInfo = BrewInfo.last()
-        println("\(brewInfo.brewDate) - \(brewInfo.brewUser) - \(brewInfo.teaState)")
-        
-        explanationLabel.text = brewInfo.explanation()
-        
-        switch brewInfo.teaState {
-            case .NoTea: statusView.backgroundColor = UIColor.redColor()
-            case .Brewed: statusView.backgroundColor = UIColor.greenColor()
-            case .Brewing: statusView.backgroundColor = UIColor.yellowColor()
-        }
-        
+//        println("View Did Load run")
+        brewInfo = BrewInfo.last()
+        setupTimer()
+        refreshUI()
         
         // Do any additional setup after loading the view.
     }
 
+    func setupTimer(){
+        timer = NSTimer.scheduledTimerWithTimeInterval(60, target: self, selector: Selector("updateMin"), userInfo: nil, repeats: true)
+    }
+    
+    func updateMin(){
+        brewInfo!.oneMinutePassed()
+        refreshUI()
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
     override func viewDidAppear(animated: Bool) {
-//            var nav = self.navigationController?.navigationBar
-//            nav?.barStyle = UIBarStyle.Black
-//            nav?.tintColor = UIColor.redColor()
-//        let imageView = UIImageView(frame: CGRect(x: 0, y: 0, width: 20, height: 20))
-//        
-//        // 4
-//        let image = UIImage(data: PFUser.currentUser()["image"] as! NSData)
-//                // 5
-//        
-//        
-//        
-//        imageView.layer.cornerRadius = 10;
-//        imageView.layer.borderWidth = 1.0;
-//        imageView.layer.borderColor = UIColor.grayColor().CGColor
-//        imageView.clipsToBounds = true
-//
-//        imageView.image = image
-//        
-//        navigationItem.titleView = imageView
         
-
         title = "Tea Track"
 
         if PFUser.currentUser() == nil {
             self.performSegueWithIdentifier("login", sender: nil)
         }
+        brewInfo = BrewInfo.last()
+        refreshUI()
+//        println("view did appear run")
     }
     
+    func refreshUI(){
 
-    /*
-    // MARK: - Navigation
+        explanationLabel.text = brewInfo!.explanation()
+        
+        switch brewInfo!.teaState {
+          case .NoTea: statusView.backgroundColor = UIColor.redColor()
+          case .Brewed: statusView.backgroundColor = UIColor.greenColor()
+          case .Brewing: statusView.backgroundColor = UIColor.yellowColor()
+        }
+        
+        if(brewInfo!.nonBrewable()){
+            brewButton.alpha = 0
+        }else{
+            brewButton.alpha = 1
+        }
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+
     }
-    */
+    
 
 }
