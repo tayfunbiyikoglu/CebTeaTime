@@ -27,12 +27,34 @@ class BrewingsViewController: UIViewController,UITableViewDataSource, UITableVie
         var week:Int
         var month:Int
         var brewingDateTime:NSDate
+        var brewing:PFObject
+            
+        func getLikeCount() -> Int {
+            var count = 0
+            var query = PFQuery(className:"Brewing_Likes")
+            query.whereKey("brewing", equalTo:brewing)
+            count = query.countObjects()
+//            query.findObjectsInBackgroundWithBlock {
+//                (objects: [AnyObject]!, error: NSError?) -> Void in
+//                if error == nil {
+//                    // The find succeeded.
+//                    println("Successfully retrieved \(objects!.count) scores.")
+//                    count = objects!.count
+//                    
+//                } else {
+//                    // Log details of the failure
+//                    println("Error: \(error!) \(error!.userInfo!)")
+//                }
+//            }
+            return count
+        }
         
         init(brewing:PFObject){
             self.user = brewing.objectForKey("user") as! PFUser
             self.week = brewing.objectForKey("week") as! Int
             self.month = brewing.objectForKey("month") as! Int
             self.brewingDateTime = brewing.objectForKey("brewDateTime") as! NSDate
+            self.brewing = brewing
             
         }
         
@@ -54,7 +76,15 @@ class BrewingsViewController: UIViewController,UITableViewDataSource, UITableVie
             return formatter.stringFromDate(brewingDateTime)
         
     }
-    
+        
+        func likesMessage() -> String {
+            let likes = getLikeCount()
+            switch(likes){
+             case 0: return "No Likes"
+             case 1: return "1 Like"
+            default: return "\(likes) Likes"
+            }
+        }
     }
     
     @IBOutlet weak var tableView: UITableView!
@@ -93,7 +123,7 @@ class BrewingsViewController: UIViewController,UITableViewDataSource, UITableVie
         var query = PFQuery(className: "Brewing")
         query.includeKey("user")
         query.orderByDescending("brewDateTime")
-        query.limit = 10
+//        query.limit = 10
         switch(criteria) {
             case .Today :
                 query.whereKey("brewDate", equalTo: getToday())
@@ -189,6 +219,7 @@ class BrewingsViewController: UIViewController,UITableViewDataSource, UITableVie
             formatter.dateStyle = NSDateFormatterStyle.LongStyle
 //            cell.labelDateTime.text = formatter.stringFromDate(brewing.brewingDateTime)
             cell.labelDateTime.text = brewing.brewingMessage()
+            cell.likesLabel.text = brewing.likesMessage()
 
         }
         return cell

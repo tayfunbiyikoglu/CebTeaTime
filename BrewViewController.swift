@@ -55,14 +55,18 @@ class BrewViewController: UIViewController {
         brewing["month"] = month
         brewing["brewDate"] = formatter.stringFromDate(timePicker.date)
         brewing["year"] = year
+        brewing["isEarlyFinished"] = "0"
         
         brewing.saveInBackground()
         
         var push = PFPush()
+//        let pushQuery = PFInstallation.query()
+//        pushQuery.whereKey("user", notEqualTo: PFUser.currentUser())
+//        push.setQuery(pushQuery)
         push.setChannel("ceb")
         var username:String = user.objectForKey("name") as! String
-        push.setMessage("\(username) has just brewed tea for you.")
-//        push.sendPushInBackground()
+        var message = "\(username) has just brewed tea for you."
+        push.setData(["content-available":1, "alert": message, "sound": "Choo_Choo.caf"])
     
         push.sendPushInBackgroundWithBlock({
             (isSuccessfull: Bool, error: NSError!) -> Void in

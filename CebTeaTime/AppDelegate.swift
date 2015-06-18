@@ -65,6 +65,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         currentInstallation.setDeviceTokenFromData(deviceToken)
         currentInstallation.channels = ["ceb"]
+
         currentInstallation.saveInBackgroundWithBlock { (succeeded, e) -> Void in
             //code
         }
@@ -125,7 +126,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
     }
     
-    func application(application: UIApplication, didReceiveRemoteNotification userInfo: [NSObject : AnyObject]) {
+    func application(application: UIApplication, didReceiveRemoteNotification userInfo: [NSObject : AnyObject], fetchCompletionHandler completionHandler: (UIBackgroundFetchResult) -> Void) {
         println("didReceiveRemoteNotification")
         PFPush.handlePush(userInfo)
         var brewInfo = HomeViewController.BrewInfo.last()
@@ -138,14 +139,20 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         var localNotification = UILocalNotification()
         println("\(secondsToBrew) seconds")
         localNotification.fireDate = NSDate(timeIntervalSinceNow: NSTimeInterval(secondsToBrew))
-        localNotification.alertBody = "Tea brewed by \(nameArray[0]) is ready, enjoy.."
+        var currentUserName = PFUser.currentUser().objectForKey("name") as! String
+        if(currentUserName == brewedBy) {
+            brewedBy = "you"
+        }else{
+            brewedBy = brewedBy.componentsSeparatedByString(" ")[0] as String
+        }
+        localNotification.alertBody = "Tea brewed by \(brewedBy) is ready, enjoy.."
         localNotification.timeZone = NSTimeZone.defaultTimeZone()
         localNotification.applicationIconBadgeNumber = UIApplication.sharedApplication().applicationIconBadgeNumber + 1
+        localNotification.soundName = UILocalNotificationDefaultSoundName
         
         application.scheduleLocalNotification(localNotification)
-        
-        
     }
+    
     
     func application(application: UIApplication, didReceiveLocalNotification notification: UILocalNotification) {
         println("didReceiveLocalNotification")

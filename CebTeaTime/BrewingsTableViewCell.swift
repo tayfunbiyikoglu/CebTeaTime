@@ -14,6 +14,8 @@ class BrewingsTableViewCell: UITableViewCell {
     @IBOutlet weak var labelName: UILabel!
     @IBOutlet weak var profilePic: UIImageView!    
     @IBOutlet weak var labelDateTime: UILabel!
+    @IBOutlet weak var likesLabel: UILabel!
+    
     
     override func awakeFromNib() {
         super.awakeFromNib()

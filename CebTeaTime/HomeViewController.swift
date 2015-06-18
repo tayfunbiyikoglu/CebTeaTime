@@ -20,6 +20,7 @@ class HomeViewController: UIViewController {
     
     class BrewInfo {
         
+        var brewing:PFObject
         var brewDate:NSDate
         var brewUser:PFUser
         var minsPassed:Int = 0
@@ -40,6 +41,7 @@ class HomeViewController: UIViewController {
         init(brewing: PFObject){
             self.brewDate = brewing.objectForKey("brewDateTime") as! NSDate
             self.brewUser = brewing.objectForKey("user") as! PFUser
+            self.brewing = brewing
         }
         
         func oneMinutePassed(){
@@ -67,20 +69,57 @@ class HomeViewController: UIViewController {
         class func last() -> BrewInfo {
             var query = PFQuery(className: "Brewing")
             query.includeKey("user")
+            query.whereKey("isEarlyFinished", equalTo: "0")
             query.orderByDescending("brewDateTime")
             return BrewInfo(brewing: query.getFirstObject())
         }
+        
+        func markAsCompleted() {
+            self.brewing["isEarlyFinished"] = "1"
+            self.brewing.saveInBackground()
+        }
     }
+    
+    
+    @IBOutlet weak var completeButton: UIButton!
     
     @IBOutlet weak var statusView: UIView!
     
     @IBOutlet weak var brewButton: UIButton!
+    
+    @IBOutlet weak var likeButton: UIButton!
+    
     
     @IBOutlet weak var explanationLabel: UILabel!
     
     var brewInfo:BrewInfo?
     
     var timer = NSTimer()
+    
+    var brewingLikeBrain:BrewingLikeBrain?
+    
+    
+    
+    @IBAction func likeToggle(sender: UIButton) {
+        brewingLikeBrain?.likeToggle()
+        likeButton.setTitle(brewingLikeBrain?.labelText, forState: .Normal)
+    }
+    
+    @IBAction func complete(sender: UIButton) {
+        brewInfo?.markAsCompleted()
+        brewInfo = BrewInfo.last()
+        refreshUI()
+        var push = PFPush()
+        push.setChannel("ceb")
+        push.setMessage("We are out of tea.")
+        
+        push.sendPushInBackgroundWithBlock({
+            (isSuccessfull: Bool, error: NSError!) -> Void in
+            
+            println(isSuccessfull)
+        })
+        
+    }
     
     @IBAction func goToUsers(sender: UIButton) {
         self.performSegueWithIdentifier("users", sender: self)
@@ -89,6 +128,12 @@ class HomeViewController: UIViewController {
     
     @IBAction func brew(sender: UIButton) {
         self.performSegueWithIdentifier("brew", sender: nil)
+    }
+    
+    
+    
+    @IBAction func goToSettings(sender: UIBarButtonItem) {
+        self.performSegueWithIdentifier("settings", sender: nil)
     }
     
     
@@ -156,6 +201,7 @@ class HomeViewController: UIViewController {
             self.performSegueWithIdentifier("login", sender: nil)
         }
         brewInfo = BrewInfo.last()
+        brewingLikeBrain = BrewingLikeBrain(brewing: brewInfo!.brewing, user: PFUser.currentUser())
         refreshUI()
 //        println("view did appear run")
     }
@@ -165,9 +211,19 @@ class HomeViewController: UIViewController {
         explanationLabel.text = brewInfo!.explanation()
         
         switch brewInfo!.teaState {
-          case .NoTea: statusView.backgroundColor = UIColor.redColor()
-          case .Brewed: statusView.backgroundColor = UIColor.greenColor()
-          case .Brewing: statusView.backgroundColor = UIColor.yellowColor()
+          case .NoTea:
+            statusView.backgroundColor = UIColor.redColor()
+            completeButton.alpha = 0
+            likeButton.alpha = 0
+          case .Brewed:
+            statusView.backgroundColor = UIColor.greenColor()
+            completeButton.alpha = 1
+            likeButton.alpha = 1
+            likeButton.setTitle(brewingLikeBrain?.labelText, forState: .Normal)
+          case .Brewing:
+            statusView.backgroundColor = UIColor.yellowColor()
+            completeButton.alpha = 0
+            likeButton.alpha = 0
         }
         
         if(brewInfo!.nonBrewable()){

@@ -7,14 +7,14 @@
 	<key>IDESourceControlProjectIdentifier</key>
 	<string>92FC7C05-127A-478F-A409-7082BF757624</string>
 	<key>IDESourceControlProjectName</key>
-	<string>CebTeaTime</string>
+	<string>project</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
 		<key>40FE9B727C362E538789B0F4D489AA9D9DF0AB87</key>
 		<string>https://github.com/tayfunbiyikoglu/CebTeaTime.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>CebTeaTime.xcodeproj</string>
+	<string>CebTeaTime.xcodeproj/project.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>40FE9B727C362E538789B0F4D489AA9D9DF0AB87</key>

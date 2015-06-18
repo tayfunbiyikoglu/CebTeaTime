@@ -13,7 +13,7 @@
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tea_launch_1" translatesAutoresizingMaskIntoConstraints="NO" id="8Dc-Q8-m2f">
                     <rect key="frame" x="0.0" y="0.0" width="466" height="588"/>
                 </imageView>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="tea_launch_1.png" translatesAutoresizingMaskIntoConstraints="NO" id="hor-7P-d9T">
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="splash2.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="hor-7P-d9T">
                     <rect key="frame" x="0.0" y="38" width="466" height="578"/>
                 </imageView>
             </subviews>
@@ -29,7 +29,7 @@
         </view>
     </objects>
     <resources>
+        <image name="splash2.jpg" width="750" height="1334"/>
         <image name="tea_launch_1" width="750" height="1334"/>
-        <image name="tea_launch_1.png" width="750" height="1334"/>
     </resources>
 </document>

@@ -9,6 +9,13 @@
 /* Begin PBXBuildFile section */
 		B71C67181ADABF3700A92C99 /* logout_small.png in Resources */ = {isa = PBXBuildFile; fileRef = B71C67161ADABF3600A92C99 /* logout_small.png */; };
 		B71C67191ADABF3700A92C99 /* signout.png in Resources */ = {isa = PBXBuildFile; fileRef = B71C67171ADABF3700A92C99 /* signout.png */; };
+		B74429C71B2F486000BCFB61 /* splash2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B74429C61B2F486000BCFB61 /* splash2.jpg */; };
+		B74429C91B2F792500BCFB61 /* button_sold_out.gif in Resources */ = {isa = PBXBuildFile; fileRef = B74429C81B2F792500BCFB61 /* button_sold_out.gif */; };
+		B74429CB1B2F840200BCFB61 /* settings3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B74429CA1B2F840200BCFB61 /* settings3.jpg */; };
+		B74429CE1B30B0FE00BCFB61 /* settings-icon6.png in Resources */ = {isa = PBXBuildFile; fileRef = B74429CC1B30B0FE00BCFB61 /* settings-icon6.png */; };
+		B74429CF1B30B0FE00BCFB61 /* settings-icon7.png in Resources */ = {isa = PBXBuildFile; fileRef = B74429CD1B30B0FE00BCFB61 /* settings-icon7.png */; };
+		B74429D11B30B14200BCFB61 /* settings-icon8.png in Resources */ = {isa = PBXBuildFile; fileRef = B74429D01B30B14200BCFB61 /* settings-icon8.png */; };
+		B74429D31B32096B00BCFB61 /* BrewingLikeBrain.swift in Sources */ = {isa = PBXBuildFile; fileRef = B74429D21B32096B00BCFB61 /* BrewingLikeBrain.swift */; };
 		B78309C41AD5E62F00F2E81C /* UserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B78309C31AD5E62F00F2E81C /* UserViewController.swift */; };
 		B78309C71ADAA32A00F2E81C /* glossy-green-button.png in Resources */ = {isa = PBXBuildFile; fileRef = B78309C51ADAA32A00F2E81C /* glossy-green-button.png */; };
 		B78309C81ADAA32A00F2E81C /* glossy-red-button.png in Resources */ = {isa = PBXBuildFile; fileRef = B78309C61ADAA32A00F2E81C /* glossy-red-button.png */; };
@@ -65,6 +72,13 @@
 /* Begin PBXFileReference section */
 		B71C67161ADABF3600A92C99 /* logout_small.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logout_small.png; sourceTree = "<group>"; };
 		B71C67171ADABF3700A92C99 /* signout.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = signout.png; sourceTree = "<group>"; };
+		B74429C61B2F486000BCFB61 /* splash2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = splash2.jpg; sourceTree = "<group>"; };
+		B74429C81B2F792500BCFB61 /* button_sold_out.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = button_sold_out.gif; sourceTree = "<group>"; };
+		B74429CA1B2F840200BCFB61 /* settings3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = settings3.jpg; sourceTree = "<group>"; };
+		B74429CC1B30B0FE00BCFB61 /* settings-icon6.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "settings-icon6.png"; sourceTree = "<group>"; };
+		B74429CD1B30B0FE00BCFB61 /* settings-icon7.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "settings-icon7.png"; sourceTree = "<group>"; };
+		B74429D01B30B14200BCFB61 /* settings-icon8.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "settings-icon8.png"; sourceTree = "<group>"; };
+		B74429D21B32096B00BCFB61 /* BrewingLikeBrain.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BrewingLikeBrain.swift; sourceTree = "<group>"; };
 		B78309C31AD5E62F00F2E81C /* UserViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserViewController.swift; sourceTree = "<group>"; };
 		B78309C51ADAA32A00F2E81C /* glossy-green-button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "glossy-green-button.png"; sourceTree = "<group>"; };
 		B78309C61ADAA32A00F2E81C /* glossy-red-button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "glossy-red-button.png"; sourceTree = "<group>"; };
@@ -199,6 +213,7 @@
 				B7EAC0291ACE8BF900C0C4D2 /* LaunchScreen.xib */,
 				B7EAC06C1ACE915700C0C4D2 /* CebTeaTime-Bridging-Header.h */,
 				B7EAC01E1ACE8BF900C0C4D2 /* Supporting Files */,
+				B74429D21B32096B00BCFB61 /* BrewingLikeBrain.swift */,
 			);
 			path = CebTeaTime;
 			sourceTree = "<group>";
@@ -235,8 +250,14 @@
 				B7FB15B01AD2BFCD00C6DF78 /* CALayer.png */,
 				B7EAC0431ACE8CAE00C0C4D2 /* profile-bg.png */,
 				B71C67161ADABF3600A92C99 /* logout_small.png */,
+				B74429C81B2F792500BCFB61 /* button_sold_out.gif */,
+				B74429C61B2F486000BCFB61 /* splash2.jpg */,
+				B74429D01B30B14200BCFB61 /* settings-icon8.png */,
 				B71C67171ADABF3700A92C99 /* signout.png */,
+				B74429CA1B2F840200BCFB61 /* settings3.jpg */,
 				B7FD60631ADF1DEE00687609 /* tea_launch_1.png */,
+				B74429CC1B30B0FE00BCFB61 /* settings-icon6.png */,
+				B74429CD1B30B0FE00BCFB61 /* settings-icon7.png */,
 				B78309C51ADAA32A00F2E81C /* glossy-green-button.png */,
 				B78309C61ADAA32A00F2E81C /* glossy-red-button.png */,
 				B78309C91ADAA7F900F2E81C /* logout.png */,
@@ -297,6 +318,11 @@
 					B7EAC01A1ACE8BF900C0C4D2 = {
 						CreatedOnToolsVersion = 6.2;
 						DevelopmentTeam = 3V4P44AEG7;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+						};
 					};
 					B7EAC02F1ACE8BF900C0C4D2 = {
 						CreatedOnToolsVersion = 6.2;
@@ -328,21 +354,27 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B74429CB1B2F840200BCFB61 /* settings3.jpg in Resources */,
 				B7EAC04B1ACE8CAE00C0C4D2 /* tea3.png in Resources */,
 				B71C67191ADABF3700A92C99 /* signout.png in Resources */,
 				B7EAC0261ACE8BF900C0C4D2 /* Main.storyboard in Resources */,
 				B7EAC02B1ACE8BF900C0C4D2 /* LaunchScreen.xib in Resources */,
 				B78309CA1ADAA7F900F2E81C /* logout.png in Resources */,
+				B74429C91B2F792500BCFB61 /* button_sold_out.gif in Resources */,
 				B7EAC0281ACE8BF900C0C4D2 /* Images.xcassets in Resources */,
 				B7FB15B11AD2BFCD00C6DF78 /* CALayer.png in Resources */,
+				B74429CE1B30B0FE00BCFB61 /* settings-icon6.png in Resources */,
+				B74429C71B2F486000BCFB61 /* splash2.jpg in Resources */,
 				B7EAC0471ACE8CAE00C0C4D2 /* facebooklogin.png in Resources */,
 				B78309C71ADAA32A00F2E81C /* glossy-green-button.png in Resources */,
 				B78309C81ADAA32A00F2E81C /* glossy-red-button.png in Resources */,
 				B7FB15A71ACEA67100C6DF78 /* profile-rabbit-toy.png in Resources */,
 				B7FB15A91AD0839500C6DF78 /* camera.png in Resources */,
+				B74429D11B30B14200BCFB61 /* settings-icon8.png in Resources */,
 				B71C67181ADABF3700A92C99 /* logout_small.png in Resources */,
 				B7EAC0481ACE8CAE00C0C4D2 /* profile-bg.png in Resources */,
 				B7FD60641ADF1DEE00687609 /* tea_launch_1.png in Resources */,
+				B74429CF1B30B0FE00BCFB61 /* settings-icon7.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -362,6 +394,7 @@
 			files = (
 				B7FB15AD1AD1D8A300C6DF78 /* WaitingViewController.swift in Sources */,
 				B78309C41AD5E62F00F2E81C /* UserViewController.swift in Sources */,
+				B74429D31B32096B00BCFB61 /* BrewingLikeBrain.swift in Sources */,
 				B7FB15A51ACEA22C00C6DF78 /* SignUpViewController.swift in Sources */,
 				B7CF67811AFFF8A700D98C8A /* BrewingsTableViewCell.swift in Sources */,
 				B7D54A7B1AD3255F00A42468 /* UserTableViewCell.swift in Sources */,
@@ -500,8 +533,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: tayfun biyikoglu (3V4P44AEG7)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: tayfun biyikoglu (3V4P44AEG7)";
+				CODE_SIGN_IDENTITY = "iPhone Developer: tayfun biyikoglu (7UHJ3K93AS)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: tayfun biyikoglu (7UHJ3K93AS)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/CebTeaTime",
@@ -510,7 +543,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "1ac69b70-be3f-4515-833c-c9fbe9411ac9";
+				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "CebTeaTime/images/CebTeaTime-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
@@ -521,8 +554,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: tayfun biyikoglu (3V4P44AEG7)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: tayfun biyikoglu (3V4P44AEG7)";
+				CODE_SIGN_IDENTITY = "iPhone Developer: tayfun biyikoglu (7UHJ3K93AS)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: tayfun biyikoglu (7UHJ3K93AS)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/CebTeaTime",
@@ -531,7 +564,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "1ac69b70-be3f-4515-833c-c9fbe9411ac9";
+				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "CebTeaTime/images/CebTeaTime-Bridging-Header.h";
 			};
 			name = Release;
