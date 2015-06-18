@@ -533,8 +533,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer: tayfun biyikoglu (7UHJ3K93AS)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: tayfun biyikoglu (7UHJ3K93AS)";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: tayfun biyikoglu (3V4P44AEG7)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: tayfun biyikoglu (3V4P44AEG7)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/CebTeaTime",
@@ -543,7 +543,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "1ac69b70-be3f-4515-833c-c9fbe9411ac9";
 				SWIFT_OBJC_BRIDGING_HEADER = "CebTeaTime/images/CebTeaTime-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
@@ -554,8 +554,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer: tayfun biyikoglu (7UHJ3K93AS)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: tayfun biyikoglu (7UHJ3K93AS)";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: tayfun biyikoglu (3V4P44AEG7)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: tayfun biyikoglu (3V4P44AEG7)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/CebTeaTime",
@@ -564,7 +564,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "1ac69b70-be3f-4515-833c-c9fbe9411ac9";
 				SWIFT_OBJC_BRIDGING_HEADER = "CebTeaTime/images/CebTeaTime-Bridging-Header.h";
 			};
 			name = Release;
